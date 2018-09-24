@@ -1,0 +1,48 @@
+---
+title: "Chapter 3 Exercises"
+output: html_notebook
+---
+```{r}
+#if caret and mlbench aren't installed, install and squelch messages
+if (!require("caret",quietly=TRUE)) install.packages("caret")
+if (!require("mlbench",quietly=TRUE)) install.packages("mlbench")
+#attach these packages and squelch message
+suppressPackageStartupMessages(library(mlbench))
+#call the data from the mlbench library
+data(Glass)
+#display  the structure of the dataset
+str(Glass)
+```
+## Part 3.1
+### A) *Using visualizations, explore the predictor variables to understand their distrubitons as well as the relationships betewen predictors.*
+
+The code chunk below subsets the columns containing numeric values and places them, by column(elements that make glass), into a scatter plot matrix in order to get a rough estimation of linearity between predicator sets.
+```{r}
+#subset numeric values in all rows, columns 1-9
+num<-Glass[,1:9]
+#create a table of scatter plots
+plot(num,main="Scatterplot Matrix of Numeric Predictors") 
+```
+#### Analyis of Scatterplot Matrix
+Based on the figure output by the plot function above, it appears that there is a strong positive correlation between the variable pair of RI and Ca. The pairset RI and Si seem to have a weak or moderate negative correlation based on their respective graphs. The rest of the variable sets appaear to have no correlation between them.
+
+
+
+```{r}
+par(mfrow = c(3,3)) #set parameter for graphics to 3x3 figure
+for (x in 1:ncol(num)) {
+  hist(num[ ,x], xlab = names(num[x]), main = paste(names(num[x]), "Histogram"))
+} #iterate through columns in num creating histograms of data and naming them as the column name + Histogram
+```
+
+
+
+
+
+
+
+
+
+
+
+
