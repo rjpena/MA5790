@@ -18,7 +18,7 @@ data(Glass)
 #display  the structure of the dataset
 str(Glass)
 ```
-## Part 3.1
+## Part 3.1 Glass Dataset
 ### A) *Using visualizations, explore the predictor variables to understand their distrubitons as well as the relationships betewen predictors.*
 
 ##### Relationships Between Variables
@@ -43,29 +43,58 @@ for (x in 1:ncol(num)) {
   hist(num[ ,x],xlab="", main = paste(names(num[x]), "Histogram"))
 } 
 ```
-#### Analyis of Histograms
+#### Analysis of Histograms
 "Rl" - Fairly symmetrical with a peak near 1.515. The data for this predictor appears to be normally distributed.  
 "Na" - Fairly symmetrical and peaks around 14 with a gap at 17.  The data for this predictor appears to be normally distributed.  
 "Mg" - Asymmetrical with peaks at 0 and 4.  The data for this predictor appears to not be normally distributed.  
-"Al" - Farily symmetrical with a peak at 1.0. The data for this predictor appears to be normally distributed.   
+"Al" - Fairly symmetrical with a peak at 1.0. The data for this predictor appears to be normally distributed.   
 "Si" - Fairly symmetrical with a peak at 73. The data for this predictor appears to be normally distributed.  
 "K"  - Asymmetric with a peak at 1 and possible extreme values at 6. The data for this predictor appears to not be normally distributed.    
-"Ca" - Farily symmetrical with a peak at 8. The data for this predictor appears to be normally distributed.   
+"Ca" - Fairly symmetrical with a peak at 8. The data for this predictor appears to be normally distributed.   
 "Ba" - Asymmetric with a peak at 0. The data for this predictor appears to not be normally distributed.   
 "Fe" - Asymmetric with a peak at 0. The data for this predictor appears to not be normally distributed.    
 
-### B) Does there appear to be any outliers in the data? Are any predictors skewed?
+### B) *Do there appear to be any outliers in the data? Are any predictors skewed?*
 The code chunk below will create boxplots of the predictor data in order to assess both skewness of the data and outliers.
 ```{r fig3, fig.height = 6, fig.width = 8}
 #set parameter for graphics to 3x3 figure
 par(mfrow = c(3,3)) 
 #iterate through columns in num creating box-and-whisker plots of the data and naming each as the column name + Boxplot
 for (x in 1:ncol(num)) {
-  boxplot(num[ ,x], horizontal=T, main = paste(names(num[x]), "Boxplot"))
+  boxplot(num[ ,x], horizontal=TRUE, main = paste(names(num[x]), "Boxplot"))
 }
 ```
 #### Analysis of Boxplots
-Boxplots are a great resource for visualizing the quartiles of the data(descriptive statistics). The box contains data points within the 25th percentile and the 75th percentile, also known as the 1st and 3rd quartiles. The "whiskers" that extend from the box, also known as "fences" show the cutoff point for outliers. Data points that lie beyond the fences are considered to be outliers. 
+##### Outliers
+Boxplots are a great resource for visualizing the quartiles of the data(descriptive statistics). The box contains data points within the 25th percentile and the 75th percentile, also known as the 1st and 3rd quartiles. The "whiskers" that extend from the box, also known as "fences" show the cutoff point for outliers. Data points that lie beyond the fences are considered to be outliers.
+
+All elements in the subeset of data appear to have outlier values with the exception of "Mg". Elements "K", "Ba", and "Fe" have a min of zero and many data points near that value. These elements contain no oultiers beyond the lower fence, only beyond the upper fence."Rl", "Na", "Al", "Si", and "Ca" have outliers beyond both upper and lower fence.
+
+##### Skewness
+The following predictors appear to be normally distributed without significant skewing: "Rl","Na","Al", and "Si". 
+
+The "Mg" predictor looks skewed to the left with a separate peak near the 0.
+
+Predictors "K", "Ba", "Ca", and "Fe" are all skewed to the right.
+
+This is evident in both the boxplots and the histograms. 
+
+### C) *Are there any relevant transformations of one or more predictors that might improve the classification model?*
+As there are many skewed predictors with assymetrical data distributions, a Box-Cox power transformation would improve the model by normalizing the data based on the best transformation it finds; log or square root transformations, if needed.
+
+
+## Part 3.2 Soybean Dataset
+
+```{r}
+#import soybean data
+data(Soybean)
+#display structure of soybean data
+str(Soybean)
+```
+
+### A) *Investigate the frequency distribution for the categorical predictors. Are any of the distributions degenerate in the ways discussed earlier in this chapter?*
+
+
 
 
 
