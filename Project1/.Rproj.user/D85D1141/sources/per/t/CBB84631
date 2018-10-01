@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538352526086.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "520324326",
+    "id" : "CBB84631",
+    "lastKnownWriteTime" : 1538355879,
+    "last_content_update" : 1538355879947,
+    "path" : "~/GitHub/MA5790/Project1/Project1.Rmd",
+    "project_path" : "Project1.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "55,0",
+        "scrollLine" : "36"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

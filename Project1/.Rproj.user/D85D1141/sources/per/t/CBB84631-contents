@@ -1,0 +1,65 @@
+---
+title: "Project 1"
+subtitle: "Data Pre-processing"
+author: 
+- Utkarsha Negi
+- Ruben Pena
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_notebook: default
+  pdf_document: default
+---
+
+
+```{r}
+install.packages(c("RCurl","VIM","caret"))
+```
+
+```{r}
+require(RCurl)
+abalone<-read.csv(text=getURL("https://raw.githubusercontent.com/rjpena/MA5790/master/Datasets/Abalone/abalone.csv"), header=T)
+```
+
+
+```{r}
+head(abalone)
+names(abalone)[1] <- 'Sex'
+```
+
+```{r}
+library(caret)
+class<-abalone$Rings
+predictors<-abalone[,-9]
+dmy<-dummyVars(~., data=predictors,fullRank = T)
+transform<- data.frame(predict(dmy, newdata=predictors))
+predictors<-transform
+```
+```{r}
+head(predictors)
+```
+
+```{r}
+YY <- scale(predictors,center=T)
+```
+
+```{r}
+head(colMeans(YY))
+```
+
+```{r}
+var(YY)
+```
+
+```{r}
+library(e1071)
+skews <- apply(predictors, 2, skewness)
+head(skews)
+```
+
+
+
+
+
+
+
+
