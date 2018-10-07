@@ -1,0 +1,13 @@
+"0","```r
+#run nearZeroVar on data. Output is columns with near zero variance.
+library(caret)
+```"
+"1","Loading required package: lattice
+Loading required package: ggplot2
+"
+"0","```r
+NZV<-c(nearZeroVar(data,names=TRUE))
+NZV
+```"
+"1","[1] \"leaf.mild\" \"mycelium\"  \"sclerotia\"
+"

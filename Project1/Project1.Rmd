@@ -22,8 +22,8 @@ abalone<-read.csv(text=getURL("https://raw.githubusercontent.com/rjpena/MA5790/m
 
 
 ```{r}
-head(abalone)
 names(abalone)[1] <- 'Sex'
+head(abalone)
 ```
 
 ```{r}

@@ -1,0 +1,6 @@
+"0","```r
+#get correlation coefficients for bbbDescr
+corrs=cor(bbbDescr)
+#plot corrs using hierarchichal clustering
+corrplot(corrs,order=\"hclust\")
+```"

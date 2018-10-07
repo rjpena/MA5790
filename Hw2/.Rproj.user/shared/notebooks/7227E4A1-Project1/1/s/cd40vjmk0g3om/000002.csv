@@ -1,0 +1,6 @@
+"0","```r
+head(colMeans(YY))
+```"
+"1","        Sex.I         Sex.M        Length      Diameter        Height  Whole.Weight 
+ 5.879371e-17  3.125742e-17  3.309862e-16  2.605233e-16 -2.591429e-16  8.343160e-17 
+"

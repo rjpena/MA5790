@@ -1,0 +1,45 @@
+"0","```r
+library(VIM)
+#aggr is from the VIM package. It plots and calculates amount of mv's for each variable and for combinations of variables. (?aggr)
+aggr(Soybean, bars=T, prop=T, combined=F, numbers=T, sortVars=T)
+```"
+"1","
+ Variables sorted by number of missings: 
+        Variable   Count
+            hail 0.17716
+           sever 0.17716
+        seed.tmt 0.17716
+         lodging 0.17716
+            germ 0.16398
+       leaf.mild 0.15813
+ fruiting.bodies 0.15520
+     fruit.spots 0.15520
+   seed.discolor 0.15520
+      shriveling 0.15520
+     leaf.shread 0.14641
+            seed 0.13470
+     mold.growth 0.13470
+       seed.size 0.13470
+       leaf.halo 0.12299
+       leaf.marg 0.12299
+       leaf.size 0.12299
+       leaf.malf 0.12299
+      fruit.pods 0.12299
+          precip 0.05564
+    stem.cankers 0.05564
+   canker.lesion 0.05564
+       ext.decay 0.05564
+        mycelium 0.05564
+    int.discolor 0.05564
+       sclerotia 0.05564
+     plant.stand 0.05271
+           roots 0.04539
+            temp 0.04392
+       crop.hist 0.02343
+    plant.growth 0.02343
+            stem 0.02343
+            date 0.00146
+        area.dam 0.00146
+           Class 0.00000
+          leaves 0.00000
+"

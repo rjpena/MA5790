@@ -1,0 +1,6 @@
+"0","```r
+#length of bbbDescr data frame after hightly correlated predictors are removed.
+length(bbbDesc_1)
+```"
+"1","[1] 85
+"

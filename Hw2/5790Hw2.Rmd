@@ -1,0 +1,13 @@
+---
+title: "Homework2: Chapter 4 Exercises"
+author: "Ruben Pena"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  pdf_document: default
+  word_document: default
+  html_notebook: default
+---
+  MA5790 - Dr. Qiuying Sha    
+  Exercises  4.1:(a)(b) 4.2:(a)(b) 4.3:(a)(b)(c)(d) 4.4:(a)(b)(c)  
+  Due October 19, 2018
+

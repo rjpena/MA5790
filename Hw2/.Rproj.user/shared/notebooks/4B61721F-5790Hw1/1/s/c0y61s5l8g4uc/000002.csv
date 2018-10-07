@@ -1,0 +1,17 @@
+"0","```r
+#call the data from the mlbench library
+data(Glass)
+```"
+"1","data set ã¤¼ã¸±Glassã¤¼ã¸² not found
+"
+"0","```r
+#display dimension and column names of Glass 
+dim(Glass)
+```"
+"1","[1] 214  10
+"
+"0","```r
+names(Glass)
+```"
+"1"," [1] \"RI\"   \"Na\"   \"Mg\"   \"Al\"   \"Si\"   \"K\"    \"Ca\"   \"Ba\"   \"Fe\"   \"Type\"
+"

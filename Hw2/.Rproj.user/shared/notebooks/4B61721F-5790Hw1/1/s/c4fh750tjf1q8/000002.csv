@@ -1,0 +1,6 @@
+"0","```r
+#subset numeric values in all rows, columns 1-9
+num<-Glass[,1:9]
+#create a table of scatter plots using subset of Glass data containing numerics only
+plot(num,main=\"Scatterplot Matrix of Numeric Predictors\") 
+```"

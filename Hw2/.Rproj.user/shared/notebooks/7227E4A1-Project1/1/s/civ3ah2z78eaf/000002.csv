@@ -1,0 +1,13 @@
+"0","```r
+library(caret)
+```"
+"1","Loading required package: lattice
+Loading required package: ggplot2
+"
+"0","```r
+class<-abalone$Rings
+predictors<-abalone[,-9]
+dmy<-dummyVars(~., data=predictors,fullRank = T)
+transform<- data.frame(predict(dmy, newdata=predictors))
+predictors<-transform
+```"

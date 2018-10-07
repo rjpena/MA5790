@@ -1,0 +1,4 @@
+"0","```r
+#store kNN imputation in Soy_1 variable. Impute for NAs in all cols using 3 nearest neighbors, do not append logical improvement variables
+Soy_1<-kNN(Soybean,variable=colnames(Soybean),k=3,imp_var=F)
+```"

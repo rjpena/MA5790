@@ -1,0 +1,42 @@
+"0","```r
+summary(Soy_1)
+```"
+"1","                 Class     date    plant.stand precip  temp    hail    crop.hist area.dam sever   seed.tmt germ    plant.growth
+ brown-spot         : 92   0: 26   0:360       0: 74   0: 96   0:554   0: 81     0:124    0:206   0:363    0:187   0:441       
+ alternarialeaf-spot: 91   1: 75   1:323       1:127   1:385   1:129   1:165     1:227    1:360   1:285    1:294   1:242       
+ frog-eye-leaf-spot : 91   2: 93               2:482   2:202           2:219     2:145    2:117   2: 35    2:202               
+ phytophthora-rot   : 88   3:118                                       3:218     3:187                                         
+ anthracnose        : 44   4:131                                                                                               
+ brown-stem-rot     : 44   5:150                                                                                               
+ (Other)            :233   6: 90                                                                                               
+ leaves  leaf.halo leaf.marg leaf.size leaf.shread leaf.malf stem    lodging stem.cankers canker.lesion fruiting.bodies ext.decay
+ 0: 77   0:304     0:358     0: 51     0:587       0:628     0:296   0:640   0:380        0:320         0:572           0:533    
+ 1:606   1: 37     1: 21     1:328     1: 96       1: 55     1:387   1: 43   1: 47        1: 84         1:111           1:136    
+         2:342     2:304     2:304                                           2: 50        2:214                         2: 14    
+                                                                             3:206        3: 65                                  
+                                                                                                                                 
+                                                                                                                                 
+                                                                                                                                 
+ int.discolor fruit.pods fruit.spots seed    mold.growth seed.discolor seed.size shriveling roots  
+ 0:619        0:407      0:351       0:562   0:616       0:617         0:618     0:642      0:568  
+ 1: 44        1:130      1: 76       1:121   1: 67       1: 66         1: 65     1: 41      1: 99  
+ 2: 20        2: 14      2: 59                                                              2: 16  
+              3:132      4:197                                                                     
+                                                                                                   
+                                                                                                   
+                                                                                                   
+"
+"0","```r
+colSums(is.na(Soy_1))
+```"
+"1","          Class            date     plant.stand          precip            temp            hail       crop.hist        area.dam 
+              0               0               0               0               0               0               0               0 
+          sever        seed.tmt            germ    plant.growth          leaves       leaf.halo       leaf.marg       leaf.size 
+              0               0               0               0               0               0               0               0 
+    leaf.shread       leaf.malf            stem         lodging    stem.cankers   canker.lesion fruiting.bodies       ext.decay 
+              0               0               0               0               0               0               0               0 
+   int.discolor      fruit.pods     fruit.spots            seed     mold.growth   seed.discolor       seed.size      shriveling 
+              0               0               0               0               0               0               0               0 
+          roots 
+              0 
+"

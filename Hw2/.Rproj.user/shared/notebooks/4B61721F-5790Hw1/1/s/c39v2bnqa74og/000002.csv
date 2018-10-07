@@ -1,0 +1,35 @@
+"0","```r
+#install packages
+install.packages(c(\"crayon\",\"knitr\",\"VIM\",\"mlbench\",\"caret\"))
+```"
+"1","Error in install.packages : Updating loaded packages
+"
+"0","```r
+#attach these packages and suppress message
+(library(mlbench))
+```"
+"1"," [1] \"mlbench\"    \"bindrcpp\"   \"dplyr\"      \"VIM\"        \"data.table\" \"grid\"       \"colorspace\" \"caret\"      \"ggplot2\"   
+[10] \"lattice\"    \"corrplot\"   \"RevoUtils\"  \"stats\"      \"graphics\"   \"grDevices\"  \"utils\"      \"datasets\"   \"methods\"   
+[19] \"base\"      
+"
+"0","```r
+(library(knitr))
+```"
+"1"," [1] \"knitr\"      \"mlbench\"    \"bindrcpp\"   \"dplyr\"      \"VIM\"        \"data.table\" \"grid\"       \"colorspace\" \"caret\"     
+[10] \"ggplot2\"    \"lattice\"    \"corrplot\"   \"RevoUtils\"  \"stats\"      \"graphics\"   \"grDevices\"  \"utils\"      \"datasets\"  
+[19] \"methods\"    \"base\"      
+"
+"0","```r
+(library(crayon))
+```"
+"1","
+Attaching package: ã¤¼ã¸±crayonã¤¼ã¸²
+
+The following object is masked from ã¤¼ã¸±package:ggplot2ã¤¼ã¸²:
+
+    %+%
+"
+"1"," [1] \"crayon\"     \"knitr\"      \"mlbench\"    \"bindrcpp\"   \"dplyr\"      \"VIM\"        \"data.table\" \"grid\"       \"colorspace\"
+[10] \"caret\"      \"ggplot2\"    \"lattice\"    \"corrplot\"   \"RevoUtils\"  \"stats\"      \"graphics\"   \"grDevices\"  \"utils\"     
+[19] \"datasets\"   \"methods\"    \"base\"      
+"

@@ -1,0 +1,25 @@
+"0","```r
+#attach dplyer, from VIM, a datafram manipulator based on plyr
+library(dplyr)
+```"
+"1","
+Attaching package: ã¤¼ã¸±dplyrã¤¼ã¸²
+
+The following objects are masked from ã¤¼ã¸±package:statsã¤¼ã¸²:
+
+    filter, lag
+
+The following objects are masked from ã¤¼ã¸±package:baseã¤¼ã¸²:
+
+    intersect, setdiff, setequal, union
+"
+"0","```r
+library(magrittr)
+Soybean %>%
+  mutate(Tot = n()) %>% 
+  filter(!complete.cases(.)) %>%
+  group_by(Class) %>%
+  mutate(Number_Missing = n(), Proportion=Number_Missing/Tot) %>%
+  select(Class, Number_Missing, Proportion) %>%
+  unique()
+```"

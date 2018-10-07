@@ -1,0 +1,4 @@
+"0","```r
+#remove highly correlated predictors (at or above 85% cutoff value)
+bbbDesc_1 <- bbbDescr[,-highCorrs]
+```"

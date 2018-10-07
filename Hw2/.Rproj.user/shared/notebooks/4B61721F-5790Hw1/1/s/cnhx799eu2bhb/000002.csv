@@ -1,0 +1,12 @@
+"0","```r
+#print length of bbbDescr and highCorrs 
+#to test if they are removed later
+length(highCorrs)
+```"
+"1","[1] 49
+"
+"0","```r
+length(bbbDescr)
+```"
+"1","[1] 134
+"

@@ -1,0 +1,8 @@
+"0","```r
+#set parameter for graphics to 3x3 figure
+par(mfrow = c(3,3)) 
+#iterate through columns in num creating box-and-whisker plots of the data and naming each as the column name + Boxplot
+for (x in 1:ncol(num)) {
+  boxplot(num[ ,x], horizontal=TRUE, main = paste(names(num[x]), \"Boxplot\"))
+}
+```"

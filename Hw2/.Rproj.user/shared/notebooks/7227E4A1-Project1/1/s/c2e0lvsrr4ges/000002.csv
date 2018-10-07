@@ -1,0 +1,8 @@
+"0","```r
+library(e1071)
+skews <- apply(predictors, 2, skewness)
+head(skews)
+```"
+"1","       Sex.I        Sex.M       Length     Diameter       Height Whole.Weight 
+   0.7651579    0.5569895   -0.6394138   -0.6087607    3.1265706    0.5305773 
+"
