@@ -11,3 +11,27 @@ output:
   Exercises  4.1:(a)(b) 4.2:(a)(b) 4.3:(a)(b)(c)(d) 4.4:(a)(b)(c)  
   Due October 19, 2018
 
+
+
+```{r}
+install.packages(c("RCurl","VIM","caret"))
+```
+
+```{r}
+require(RCurl)
+music<-read.csv(text=getURL("https://raw.githubusercontent.com/rjpena/MA5790/master/Datasets/Genres/genresTrain.csv"), header=T)
+head(genres)
+```
+
+```{r}
+counts = table(music$GENRE)
+counts
+```
+
+```{r}
+barplot(counts,ylab = "Frequency",xlab = "Genre")
+```
+
+
+
+
