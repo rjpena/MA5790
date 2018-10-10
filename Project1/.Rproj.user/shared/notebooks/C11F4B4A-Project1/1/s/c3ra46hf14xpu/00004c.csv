@@ -1,0 +1,4 @@
+"0","par(mfrow = c(2,4))"
+"0","for (x in 3:ncol(abalone)) {"
+"0","  boxplot(abalone[ ,x], horizontal=TRUE, main = paste(names(abalone[x]), ""Boxplot""))"
+"0","}"

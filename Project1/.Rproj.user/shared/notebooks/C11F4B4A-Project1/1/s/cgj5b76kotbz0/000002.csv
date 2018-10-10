@@ -1,0 +1,6 @@
+"0","library(caret)"
+"0","#class<-abalone$Rings"
+"0","#predictors<-abalone[,-9]"
+"0","dmy<-dummyVars(~., data=abalone,fullRank = T)"
+"0","transform<- data.frame(predict(dmy, newdata=abalone))"
+"0","abalone<-transform"

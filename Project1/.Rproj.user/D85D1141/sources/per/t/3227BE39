@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539140820100.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "508865235",
+    "id" : "3227BE39",
+    "lastKnownWriteTime" : 1537902208,
+    "last_content_update" : 1537902208,
+    "path" : "~/GitHub/MA5790/Homework1/Homework1.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "39,0",
+        "scrollLine" : "34"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

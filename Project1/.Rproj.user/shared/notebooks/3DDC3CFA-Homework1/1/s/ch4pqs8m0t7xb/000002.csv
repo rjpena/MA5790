@@ -1,0 +1,6 @@
+"0","#set parameter for graphics to 3x3 figure
+par(mfrow = c(3,3)) 
+#iterate through columns in num creating histograms of data and naming each as the column name + Histogram
+for (x in 1:ncol(num)) {
+  hist(num[ ,x],xlab=\"\", main = paste(names(num[x]), \"Histogram\"))
+} "

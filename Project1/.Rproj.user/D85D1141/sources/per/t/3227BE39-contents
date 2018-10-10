@@ -1,0 +1,106 @@
+---
+title: "Chapter 3 Exercises"
+author: "Ruben Pena"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_notebook
+---
+  MA5790 - Dr. Qiuying Sha    
+  Exercises 3.1, 3.2, 3.3(-b)  
+  Data Pre-processing, R code, and analysis.
+```{r}
+#if caret and mlbench aren't installed, install and suppress messages
+if (!require("caret",quietly=TRUE)) install.packages("caret")
+if (!require("mlbench",quietly=TRUE)) install.packages("mlbench")
+#attach these packages and suppress message
+suppressPackageStartupMessages(library(mlbench))
+#call the data from the mlbench library
+data(Glass)
+#display  the structure of the dataset
+str(Glass)
+```
+## Part 3.1 Glass Dataset
+### A) *Using visualizations, explore the predictor variables to understand their distrubitons as well as the relationships betewen predictors.*
+
+##### Relationships Between Variables
+
+The code chunk below subsets the columns containing numeric values and places them, by column(elements that make glass), into a scatter plot matrix in order to get a rough estimation of linearity between predictor sets.
+```{r fig1, fig.height = 6, fig.width = 8}
+#subset numeric values in all rows, columns 1-9
+num<-Glass[,1:9]
+#create a table of scatter plots using subset of Glass data containing numerics only
+plot(num,main="Scatterplot Matrix of Numeric Predictors") 
+```
+#### Analyis of Scatterplot Matrix
+Based on the figure output by the plot function above, it appears that there is a strong positive correlation between the variable pair of Rl and Ca. The pair set Rl and Si seem to have a weak or moderate negative correlation based on their respective graphs. The rest of the variable sets appear to have no correlation between them.
+
+##### Data Distributions
+The code chunk below creates a figure of histograms with a 3x3 axes (for all 9 columns in one figure) to get a quick visualization of distribution of data points among the variables.
+```{r fig2, fig.height = 6, fig.width = 8}
+#set parameter for graphics to 3x3 figure
+par(mfrow = c(3,3)) 
+#iterate through columns in num creating histograms of data and naming each as the column name + Histogram
+for (x in 1:ncol(num)) {
+  hist(num[ ,x],xlab="", main = paste(names(num[x]), "Histogram"))
+} 
+```
+#### Analysis of Histograms
+"Rl" - Fairly symmetrical with a peak near 1.515. The data for this predictor appears to be normally distributed.  
+"Na" - Fairly symmetrical and peaks around 14 with a gap at 17.  The data for this predictor appears to be normally distributed.  
+"Mg" - Asymmetrical with peaks at 0 and 4.  The data for this predictor appears to not be normally distributed.  
+"Al" - Fairly symmetrical with a peak at 1.0. The data for this predictor appears to be normally distributed.   
+"Si" - Fairly symmetrical with a peak at 73. The data for this predictor appears to be normally distributed.  
+"K"  - Asymmetric with a peak at 1 and possible extreme values at 6. The data for this predictor appears to not be normally distributed.    
+"Ca" - Fairly symmetrical with a peak at 8. The data for this predictor appears to be normally distributed.   
+"Ba" - Asymmetric with a peak at 0. The data for this predictor appears to not be normally distributed.   
+"Fe" - Asymmetric with a peak at 0. The data for this predictor appears to not be normally distributed.    
+
+### B) *Do there appear to be any outliers in the data? Are any predictors skewed?*
+The code chunk below will create boxplots of the predictor data in order to assess both skewness of the data and outliers.
+```{r fig3, fig.height = 6, fig.width = 8}
+#set parameter for graphics to 3x3 figure
+par(mfrow = c(3,3)) 
+#iterate through columns in num creating box-and-whisker plots of the data and naming each as the column name + Boxplot
+for (x in 1:ncol(num)) {
+  boxplot(num[ ,x], horizontal=TRUE, main = paste(names(num[x]), "Boxplot"))
+}
+```
+#### Analysis of Boxplots
+##### Outliers
+Boxplots are a great resource for visualizing the quartiles of the data(descriptive statistics). The box contains data points within the 25th percentile and the 75th percentile, also known as the 1st and 3rd quartiles. The "whiskers" that extend from the box, also known as "fences" show the cutoff point for outliers. Data points that lie beyond the fences are considered to be outliers.
+
+All elements in the subeset of data appear to have outlier values with the exception of "Mg". Elements "K", "Ba", and "Fe" have a min of zero and many data points near that value. These elements contain no oultiers beyond the lower fence, only beyond the upper fence."Rl", "Na", "Al", "Si", and "Ca" have outliers beyond both upper and lower fence.
+
+##### Skewness
+The following predictors appear to be normally distributed without significant skewing: "Rl","Na","Al", and "Si". 
+
+The "Mg" predictor looks skewed to the left with a separate peak near the 0.
+
+Predictors "K", "Ba", "Ca", and "Fe" are all skewed to the right.
+
+This is evident in both the boxplots and the histograms. 
+
+### C) *Are there any relevant transformations of one or more predictors that might improve the classification model?*
+As there are many skewed predictors with assymetrical data distributions, a Box-Cox power transformation would improve the model by normalizing the data based on the best transformation it finds; log or square root transformations, if needed.
+
+
+## Part 3.2 Soybean Dataset
+
+```{r}
+#import soybean data
+data(Soybean)
+#display structure of soybean data
+str(Soybean)
+```
+
+### A) *Investigate the frequency distribution for the categorical predictors. Are any of the distributions degenerate in the ways discussed earlier in this chapter?*
+
+
+
+
+
+
+
+
+
+
+
