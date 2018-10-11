@@ -39,7 +39,13 @@ head(abalone)
 ```
 
 ```{r}
-summary(abalone)
+
+abalone<-abalone[,-5]
+head(abalone)
+abalone<-abalone[,-5]
+head(abalone)
+abalone<-abalone[,-6]
+head(abalone)
 ```
 
 
@@ -49,6 +55,22 @@ library(e1071)
 skews <- apply(abalone, 2, skewness)
 skews
 ```
+```{r}
+par(mfrow = c(2,4)) 
+#iterate through columns in num creating histograms of data and naming each as the column name + Histogram
+for (x in 1:ncol(abalone)) {
+  hist(abalone[ ,x],xlab="", main = paste(names(abalone[x])))}
+```
+
+```{r}
+par(mfrow = c(2,4))
+for (x in 1:ncol(abalone)) {
+  boxplot(abalone[ ,x], horizontal=TRUE, main = paste(names(abalone[x])))
+}
+```
+
+
+
 
 ```{r}
 YY <- scale(predictors,center=T)
@@ -71,6 +93,7 @@ summary(a)
 ```{r}
 require(stats)
 library(ggplot2)
+abalone <- abalone[,-Height]
 ```
 
 ```{r}

@@ -1,4 +1,8 @@
 "0","library(caret)"
+"2","Loading required package: lattice
+"
+"2","Loading required package: ggplot2
+"
 "0","#class<-abalone$Rings"
 "0","#predictors<-abalone[,-9]"
 "0","dmy<-dummyVars(~., data=abalone,fullRank = T)"

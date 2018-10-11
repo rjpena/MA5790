@@ -1,1 +1,4 @@
-"0","require(stats)"
+"0","abalone <- abalone[,-Height]
+"
+"2","Error in `[.data.frame`(abalone, , -Height) : object 'Height' not found
+"
