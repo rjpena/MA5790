@@ -1,0 +1,5 @@
+"0","par(mfrow = c(2,4)) "
+"0","#iterate through columns in num creating histograms of data and naming each as the column name + Histogram"
+"0","for (x in 3:9) {"
+"0","  hist(ss[ ,x],xlab="""", main = paste(names(abalone[x]), ""Histogram""))"
+"0","} "

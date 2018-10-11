@@ -95,13 +95,27 @@ ss <- spatialSign(abalone)
 ```
 
 ```{r}
-plot(spatialSign(abalone), asp=1, pch=19)
+par(mfrow = c(2,4)) 
+#iterate through columns in num creating histograms of data and naming each as the column name + Histogram
+for (x in 3:9) {
+  hist(ss[ ,x],xlab="", main = paste(names(abalone[x]), "Histogram"))
+} 
 
 ```
 
 
+```{r}
+par(mfrow = c(2,4))
+for (x in 3:ncol(ss)) {
+  boxplot(ss[ ,x], horizontal=TRUE, main = paste(names(abalone[x])))
+}
+```
 
 
+```{r}
+require(caret)
+pairs(ss)
+```
 
 
 

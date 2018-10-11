@@ -1,2 +1,0 @@
-"0","require(RCurl)"
-"0","abalone<-read.csv(text=getURL(""https://raw.githubusercontent.com/rjpena/MA5790/master/Datasets/Abalone/abalone.csv""), header=T)"

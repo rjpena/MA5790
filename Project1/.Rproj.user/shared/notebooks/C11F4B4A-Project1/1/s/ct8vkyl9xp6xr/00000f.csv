@@ -1,0 +1,6 @@
+"0","par(mfrow = c(2,4))"
+"0","for (x in 3:ncol(ss)) {"
+"0","  boxplot(ss[ ,x], horizontal=TRUE, main = paste(names(abalone[x])))"
+"0","}"
+"2","Error in `[.data.frame`(abalone, x) : undefined columns selected
+"

@@ -1,0 +1,3 @@
+"0","ss <- spatialSign(abalone)"
+"2","Error in spatialSign(abalone) : could not find function ""spatialSign""
+"
